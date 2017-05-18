@@ -1,1 +1,12 @@
-justinxqjin
+---
+layout: default
+title: justinxqjin's blog
+---
+
+<h2>{{ page.title }}</h2>
+<p>Article List</p>
+<ul>
+    { % for post in site.posts %}
+        <li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
